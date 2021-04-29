@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký học viên</title>
+    <link rel="stylesheet" type="text/css" href="./style-sign-up.css">
+</head>
+<body>
+    <div class="sign-up">
+        <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+        <Form method="POST" action="" class="grid-container">
+            <div class="grid-item">
+                <label for="">Họ và tên</label>
+            </div>
+            <div class="grid-item">
+                <input type="text" name="full-name"> 
+            </div>
+            <div class="grid-item">
+                <label for="">Ngày sinh</label>
+            </div>
+            <div class="grid-item">
+                <input type="text" name="birth-to-day" size="10px"> 
+            </div>
+            <div class="grid-item">
+                <label for="">Giới tính</label>
+            </div>
+            <div class="grid-item">
+                <input type="radio" name="gender"> Nam
+                <input type="radio" name="gender"> Nữ 
+            </div>
+            <div class="grid-item">
+                <label for="">Địa chỉ</label>
+            </div>
+            <div class="grid-item">
+                <textarea name="address" rows="2" cols="18"></textarea> 
+            </div>
+            <div class="grid-item">
+                <label for="">Lớp</label>
+            </div>
+            <div class="grid-item">
+                <select name="class">
+                    <option value="">--Chọn lớp--</option>
+                    <option value="html">HTML/CSS/JavaScrip</option>
+                    <option value="python">Python</option>
+                    <option value="php">PHP</option>
+                    <option value="java">Java</option>
+                </select> 
+            </div>
+            <div class="grid-item">
+            <label for="">Email</label>
+            </div>
+            <div class="grid-item">
+                <input type="text" name="email" size="14"> 
+            </div>
+            <div class="grid-item">
+                <label for="">Điện thoại</label>
+            </div>
+            <div class="grid-item">
+                <input type="tel" name="phone-number" size="14"> 
+            <div style="margin-top: 5px;">
+                <input type="button" value="Đăng ký">
+                <input type="reset" value="Nhập lại">
+            </div>
+        </Form>
+    </div>
+</body>
+</html>
