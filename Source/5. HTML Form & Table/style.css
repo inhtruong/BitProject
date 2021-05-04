@@ -1,0 +1,67 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1, h2{
+    color: blue;
+}
+
+h1{
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+.container{
+    width: 1140px;
+    margin: 0px auto;
+    background-color: lavender;
+    padding: 0 20px;
+}
+
+.content{
+    width: 75%;
+    float: left;
+}
+
+form{
+    width: 25%;
+    float: left;
+}
+
+
+input{
+    display: block;
+    margin: 5px;
+    padding: 10px;
+}
+
+.clear::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.avatar_image{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+h4{
+    float: left;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+

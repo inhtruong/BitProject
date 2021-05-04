@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lấy survey khách hàng</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <h1>Market Research Survey</h1>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+
+    <form action="https://gallery.wufoo.com/embed/pyej3161l9pt0d/def/embedKey=pyej3161l9pt0d89279" method="POST">
+        <div class="transion">
+            <div class="text"> What is your age range? </div>
+            <div>
+            <select name="age" >
+                <option value="age">18-24</option>
+                <option value="age">25-34</option>
+                <option value="age">35-50</option>
+                <option value="age">50+</option>
+            </select> 
+        </div>
+
+        <div>
+            <div class="text"> What is your yearly income range? </div>
+            <select name="yearly-income-range">
+                <option value="range">$0 = $25,000</option>
+                <option value="range">$25,000 - $50,000</option>
+                <option value="range">$50,000 - $100,000</option>
+                <option value="range">$100,000+</option>
+            </select>
+        </div>
+        
+        <div>
+            <div class="text"> Gender Identity </div>
+            <input type="radio" name="gender">Male <br>
+            <input type="radio" name="gender">Female <br>
+            <input type="radio" name="gender">Other <br>
+            <input type="text" name="gender" size="15px">
+        </div>
+
+        <div>
+            <div class="text"> Which of the following products have your purchased in the last 2 months. Please check all that apply. </div>
+            <input type="checkbox" name="product">Product 1 <br>
+            <input type="checkbox" name="product">Product 2 <br>
+            <input type="checkbox" name="product">Product 3 <br>
+        </div>
+
+        <div>
+            <div class="text"> How often would you use our new product? </div>
+            <input type="radio" name="use">Daily <br>
+            <input type="radio" name="use">Weekly <br>
+            <input type="radio" name="use">Monthly <br>
+        </div>
+
+        <div>
+            <div class="text"> What would you pay for the new product? </div>
+            <span>$</span>
+            <input type="text" name="dollar" size="5px">
+            <span>.</span>
+            <input type="text" name="cent" size="1px"> <br>
+            <span style="margin-left:11px;">Dollars</span>
+            <span style="margin-left:14px;">Cents</span>
+        </div>
+
+        <div>
+            <div class="text"> What features would you like to see in the new product. </div>
+            <textarea name="feature" cols="185%" rows="7"></textarea>
+        </div>
+        
+        <div>
+            <div class="text"> Please rate your level of agreement with the following statements. </div>
+            <table>
+                <tbody>
+                    <tr class="text" style="text-align: center;">
+                        <td></td>
+                        <td>Strongly Disagree</td>
+                        <td>Disagree</td>
+                        <td>Agree</td>
+                        <td>Strongly Agree</td>
+                    </tr>
+                    <tr>
+                        <td class="text">Our products are priced fairly</td>
+                        <td class="margin">
+                            <input type="radio" name="priced-fairly"> <br> 1
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="priced-fairly"> <br> 2
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="priced-fairly"> <br> 3
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="priced-fairly"> <br> 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text">Our products are high quality</td>
+                        <td class="margin">
+                            <input type="radio" name="high-quality"> <br> 1
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="high-quality"> <br> 2
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="high-quality"> <br> 3
+                        </td >
+                        <td class="margin">
+                            <input type="radio" name="high-quality"> <br> 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text">You would recommend our product to a friend or coworker.</td>
+                        <td class="margin">
+                            <input type="radio" name="friend-coworker"> <br> 1
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="friend-coworker"> <br> 2
+                        </td>
+                        <td class="margin">
+                            <input type="radio" name="friend-coworker"> <br> 3
+                        </td >
+                        <td class="margin"> 
+                            <input type="radio" name="friend-coworker"> <br> 4
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <input type="button" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

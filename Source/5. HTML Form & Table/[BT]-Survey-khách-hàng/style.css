@@ -1,0 +1,45 @@
+*{
+    font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+
+div{
+    margin: 10px 0px;
+    font-size: small;
+}
+
+
+.text{
+    font-weight: bold;
+    
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: #cccccc;
+}
+
+tr, td{
+    border: 1px solid darkgray;
+    
+}
+td{
+    padding: 5px;
+}
+
+.margin{
+    text-align: center;
+}
+
+.transition{
+    display: flex;
+    background: red;
+    transition: width 4s;
+    justify-content: left;
+}
+.transition::after{
+    background-color: aqua; 
+}

@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    padding: auto;
+    background-color: blanchedalmond;
+
+}
+h2{
+    text-align: center;
+    color: blue;
+    margin: 40px 0px 20px 0;
+    font-size: 30px;
+}
+
+.calendar{
+    width: 450px;
+    margin: 0 auto;
+    padding: auto;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+     
+}
+
+.grid-item{
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+#mon, #tue, #wed, #thu, #fri{
+    background-color: rgb(218, 180, 13);
+    font-weight: 800;
+    color: white;
+}
+#sun{
+    background-color: red;
+    font-weight: 800;
+    color: white;
+}
+#sat{
+    background-color: blue;
+    font-weight: 800;
+    color: white;
+}
+
+.grid-item-1{
+    border: 1px solid slategray;
+    padding: 5px;
+    text-align: center;
+}
+
+.container span{
+    font-size: 11px;
+    position: relative;
+        top: 3px;
+    color: black;
+}
+#red{
+    color: red;
+}

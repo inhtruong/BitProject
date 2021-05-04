@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: sandybrown;
+}
+table{
+    border-collapse: collapse;
+}
+tr, td{  
+    width: 50px;
+    height: 50px;
+}
+.color{
+    background-color: black;
+}
+.color-1{
+    background-color: white;
+}
+.digit td{ 
+    position: relative;
+    top: 5px;
+    left: 20px; 
+}
+
+.digit, td{
+    width: 50px;
+    height: 35px;
+}
+.letter{
+    position: relative;
+    left: 30px;
+    width: 15px;
+    height: 50px;
+}
+
+/* tr, .letter{
+    width: 20px;
+    height: 50px;
+} */
