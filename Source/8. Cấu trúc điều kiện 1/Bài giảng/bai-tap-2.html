@@ -5,25 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XĐ tháng có bao nhiêu ngày?</title>
+    <style>
+        .container{
+            width: 470px;
+            height: 200px;
+            border: 1px solid white;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px auto;
+            background-color: aquamarine;
+        }
+    </style>
 </head>
 <body>
-    <div>
-    <h2>Xác định có bao nhiêu ngày bằng if - else</h2>
-    <p>Tháng cần kiểm tra: </p>
-    <input type="text" id="month" placeholder="Điền tháng ...">
-    
-    <p id="day"></p>
+    <div class="container">
+        <h2>Xác định có bao nhiêu ngày bằng if - else</h2>
+        <p>Tháng cần kiểm tra: </p>
+        <input type="text" id="month" placeholder="Điền tháng ...">
+        <input type="button" id="test" value="Kiểm tra">
+        <p id="day"></p>
     </div>
     <script>
-        let month = prompt("Tháng mấy?", "");
-        if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||(month == 8) ||(month == 10) ||(month == 12)){
-            document.getElementById("day").innerText = ("Tháng " + month + " có 31 ngày");
-        } else if ((month == 4) || (month == 6) || (month == 11)) {
-            document.getElementById("day").innerText = ("Tháng " + month + " có 30 ngày");
-        } else if (month == 2){
-            document.getElementById("day").innerText = ("Tháng " + month + " có 29 ngày");
-        } else document.getElementById("day").innerText = ("Không có tháng này!!");
-
+        let test = document.getElementById("test");
+            test.addEventListener("click", testFunc);
+        function testFunc(){
+            let month = document.getElementById("month").value;
+            if ((month == 1) || (month == 3) || (month == 5) || (month == 7) ||(month == 8) ||(month == 10) ||(month == 12)){
+                document.getElementById("day").innerText = ("Tháng " + month + " có 31 ngày");
+            } else if ((month == 4) || (month == 6) || (month == 9) || (month == 11)) {
+                document.getElementById("day").innerText = ("Tháng " + month + " có 30 ngày");
+            } else if (month == 2){
+                document.getElementById("day").innerText = ("Tháng " + month + " có 29 ngày");
+            } else document.getElementById("day").innerText = ("Không có tháng này!!");
+    }
     </script>
 </body>
 </html>
