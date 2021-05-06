@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp loại học lực</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-image: url(https://image.freepik.com/foto-gratis/hola-a-mano-dibujo-flores-en-estilo-acuarela-sobre-papel-blanco_7190-944.jpg);
+            background-size: 500px;
+            background-position: center;
+        }
+        .container{
+            width: 450px;
+            border: 1px solid white;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px auto;
+            background-color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Xếp loại học lực bằng toán tử 3 ngôi</h2>
+        <p>Điểm số của bạn:</p>
+        <input type="text" id="score" placeholder="Nhập điểm của bạn" size="15">
+        <input type="button" id="submit" value="Xác nhận">
+        <p>Xếp loại của bạn: <span id="grade"></span></p>
+    </div>
+    <script>
+        // let submit = document.getElementById("submit");
+        //     submit.addEventListener("click", submitFunc);
+        // function submitFunc(){
+        //     let score = document.getElementById("score").value;
+        //     let grade = "";
+        //     score >= 10? (document.getElementById("grade").innerText=("Không xếp loại được!!"))
+        //         :(score >= 9? (document.getElementById("grade").innerText=("HL Xuất Sắc")) 
+        //             : (score >= 8? (document.getElementById("grade").innerText=("HL Giỏi"))
+        //                 : (score >= 7? (document.getElementById("grade").innerText=("HL Khá"))
+        //                     : (score >= 5? (document.getElementById("grade").innerText=("HL Tbình")) 
+        //                         : (score >= 0? (document.getElementById("grade").innerText=("HL Yếu"))
+        //                             : (document.getElementById("grade").innerText=("Không xếp loại được!!"))))))) ;
+        // }
+        
+        let submit = document.getElementById("submit");
+            submit.addEventListener("click", submitFunc);
+        function submitFunc(){
+            let score = document.getElementById("score").value;
+            let grade;
+            score >= 10? (grade=("Không xếp loại được!!"))
+                :(score >= 9? (grade=("HL Xuất Sắc")) 
+                    : (score >= 8? (grade=("HL Giỏi"))
+                        : (score >= 7? (grade=("HL Khá"))
+                            : (score >= 5? (grade=("HL Tbình")) 
+                                : (score > 0? (grade=("HL Yếu"))
+                                    : (grade=("Không xếp loại được!!"))))))) ;
+            document.getElementById("grade").innerText = (grade);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Sự kiện onchange</title>
+</head>
+<body>
+    <select onchange="do_something()" id="mySelect">
+        <!-- do_something() là hàm (hàm tự đặt tên) -->
+        <option value="Mec">Mercedes</option>
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+    <script>
+        function do_something() {
+            var selectedValue = document.getElementById("mySelect").value;
+            alert(selectedValue);
+        }
+    </script>
+
+    <select id="mySelect-1">
+        <option value="Mec">Mercedes</option>
+        <option value="BMW">BMW</option>
+        <option value="Audi">Audi</option>
+        <option value="Volvo">Volvo</option>
+    </select>
+
+    <script>
+        var selectElement = document.getElementById("mySelect-1");
+        // getElementById có chức năng lấy ra thành phần có id là "mySelect"
+        selectElement.addEventListener("change",changeFunction);
+        // addEventListener để bắt sự kiện trên
+        // "change" là tên sự kiện, changeFunction là hàm được gọi 
+        function changeFunction() {
+            var selectedValue = document.getElementById("mySelect-1").value;
+            alert(selectedValue);
+        } 
+    </script>
+
+</body>
+</html>

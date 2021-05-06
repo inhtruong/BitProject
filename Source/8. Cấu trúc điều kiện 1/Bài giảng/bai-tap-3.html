@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp loại học lực</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-image: url(https://images.creativemarket.com/0.1.0/ps/2534583/1360/1020/m1/fpnw/wm1/jwdehbmlpulm9xb9ijjcyovqxedezzc38jgdpdfdgv377oqjprjme0cg8ytqkgrf-.jpg?1491977725&s=86dcaa0937e3fe0250fd6f10b7a93ede);
+            background-position: center;
+            background-size: cover;
+        }
+        .container{
+            width: 450px;
+            border: 1px solid white;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px auto;
+            background-color: yellowgreen;
+        }
+
+       h2{
+           color: darkblue;
+       }
+
+       #submit{
+           width: 120px;
+           height: 40px;
+           border-radius: 20px;
+           color: white;
+           font-size: 18px;
+           background-color: orchid;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Xếp loại học lực bằng switch case</h2>
+        <p>Điểm số của bạn:
+        <input type="text" id="score" placeholder="Nhập điểm của bạn" size="15">
+        </p>
+        <button id="submit">Xác nhận</button>
+        <p>Xếp loại của bạn: <span id="grade"></span></p>
+    </div>
+    <script>
+        let test = document.getElementById("submit");
+            test.addEventListener("click", submitFunc);
+        function submitFunc(){
+            let score = document.getElementById("score").value;
+            let grade;
+            switch (score){
+                case "0":
+                case "1":
+                case "2":
+                case "3":
+                case "4":
+                case "5":
+                    grade = "Yếu";
+                    break;
+                case "6":
+                    grade = "Trung bình";
+                    break;
+                case "7":
+                    grade = "Khá";
+                    break;
+                case "8":
+                    grade = "Giỏi";
+                    break;
+                case "9":
+                case "10":
+                    grade = "Xuất sắc";
+                    break;
+                default: 
+                    grade = "Không xếp loại được";
+            }
+            document.getElementById("grade").innerText = (grade);
+        }
+    </script>
+</body>
+</html>

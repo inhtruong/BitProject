@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện onmouseover và onmouseout    </title>
+</head>
+<body>
+    Cach 1
+    <p onmouseover="mouseover()" onmouseout="mouseout()" id="color">This is the text</p>
+    <script>
+        function mouseover(){
+            document.getElementById("color").style.color="red";
+        }
+        function mouseout(){
+            document.getElementById("color").style.color="black";
+        }
+    </script>
+    <br>
+    Cach 2
+    <p id="color-1">This is the text 2</p>
+    <script>
+        var onmouse = document.getElementById("color-1");
+        onmouse.addEventListener("mouseover",changemouseover);
+        onmouse.addEventListener("mouseout",changemouseout);
+        function changemouseover(){
+           var onmouse = document.getElementById('color-1').style.color="red";
+        }
+        function changemouseout(){
+           var onmouse = document.getElementById('color-1').style.color="black";
+        }
+
+    </script>
+</body>
+</html>
