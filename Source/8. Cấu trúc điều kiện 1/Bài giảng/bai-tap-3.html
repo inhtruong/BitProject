@@ -52,7 +52,7 @@
         function submitFunc(){
             let score = document.getElementById("score").value;
             let grade;
-            switch (score){
+            switch (((score <=10)? ((score >=9)? "9": (score >=8)? "8" : (score >=7)? "7" : (score>=6)? "6": (score>=0)? "5": "null") : "null")){
                 case "0":
                 case "1":
                 case "2":
