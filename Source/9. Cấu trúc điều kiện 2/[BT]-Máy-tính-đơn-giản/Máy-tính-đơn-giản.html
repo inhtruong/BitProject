@@ -10,27 +10,29 @@
 <body>
     <div class="container">
         <div id="screen">
-            0sfjaj9jwr
+            <input type="text" id="input" readonly size="14">
         </div>
-        <div class="grid-container">
-            <div class="grid-items"><button>1</button></div>
-            <div class="grid-items"><button>2</button></div>
-            <div class="grid-items"><button>3</button></div>
-            <div class="grid-items"><button>+</button></div>
-            <div class="grid-items"><button>4</button></div>
-            <div class="grid-items"><button>5</button></div>
-            <div class="grid-items"><button>6</button></div>
-            <div class="grid-items"><button>-</button></div>
-            <div class="grid-items"><button>7</button></div>
-            <div class="grid-items"><button>8</button></div>
-            <div class="grid-items"><button>9</button></div>
-            <div class="grid-items"><button>x</button></div>
-            <div class="grid-items"><button>C</button></div>
-            <div class="grid-items"><button>0</button></div>
-            <div class="grid-items"><button>=</button></div>
-            <div class="grid-items"><button>/</button></div>
+        <div class="grid-container" id="demo">
+            <button class="grid-items" onclick="view('1')">1</button>
+            <button class="grid-items" onclick="view('2')">2</button>
+            <button class="grid-items" onclick="view('3')">3</button>
+            <button class="grid-items" onclick="view('+')">+</button>
+            <button class="grid-items" onclick="view('4')">4</button>
+            <button class="grid-items" onclick="view('5')">5</button>
+            <button class="grid-items" onclick="view('6')">6</button>
+            <button class="grid-items" onclick="view('-')">-</button>
+            <button class="grid-items" onclick="view('7')">7</button>
+            <button class="grid-items" onclick="view('8')">8</button>
+            <button class="grid-items" onclick="view('9')">9</button>
+            <button class="grid-items" onclick="view('x')">x</button>
+            <button class="grid-items" onclick="clearnum()">C</button>
+            <button class="grid-items" onclick="view('0')">0</button>
+            <button class="grid-items" onclick="calculat()">=</button>
+            <button class="grid-items" onclick="view('/')">/</button>
         
         </div>
     </div>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
