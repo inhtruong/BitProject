@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XĐ tháng có bao nhiêu ngày?</title>
+    <style>
+        .container{
+            width: 470px;
+            height: 200px;
+            border: 1px solid white;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px auto;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Xác định tháng có bao nhiêu ngày bằng switch case</h2>
+        <p>Tháng cần kiểm tra: </p>
+        <input type="text" id="month" placeholder="Điền tháng ...">
+        <input type="button" id="test" value="Kiểm tra">
+        <p id="day"></p>
+    </div>
+    <script>
+        let alertmonth = null;
+        let test = document.getElementById("test");
+            test.addEventListener("click", testFunc);
+        function testFunc(){
+            let month = document.getElementById("month").value;
+            switch(month){
+                case ("1"):
+                case ("3"):
+                case ("5"):
+                case ("7"):
+                case ("8"):
+                case ("10"):
+                case ("12"):
+                    alertmonth = ("Tháng " + month + " có 31 ngày");
+                    break;
+                case ("4"):
+                case ("6"):
+                case ("9"):
+                case ("11"):
+                    alertmonth = ("Tháng " + month + " có 30 ngày");
+                    break;
+                case ("2"):
+                    alertmonth = ("Tháng " + month + " có 28 hoặc 29 ngày");
+                    break;
+                default: 
+                    alertmonth = ("Không có tháng này!!");
+            }
+            document.getElementById("day").innerText = (alertmonth);
+        }
+    
+    </script>
+</body>
+</html>

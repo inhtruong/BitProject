@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đo chỉ số cơ thể</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-image: url(https://image.freepik.com/foto-gratis/hola-a-mano-dibujo-flores-en-estilo-acuarela-sobre-papel-blanco_7190-944.jpg);
+            background-size: 500px;
+            background-position: center;
+        }
+        .container{
+            width: 450px;
+            border: 1px solid white;
+            border-radius: 20px;
+            text-align: center;
+            margin: 30px auto;
+            background-color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Đo chỉ số cơ thể</h2>
+        <label>Chiều cao:</label>
+        <input type="text" id="height" placeholder="Nhập chiều cao của bạn" size="15"> <br>
+        <label>Cân nặng:</label>
+        <input type="text" id="weight" placeholder="Nhập cân nặng của bạn" size="15"> <br>
+        <input type="button" id="test" value="Kiểm tra">
+        <p>Chỉ số cơ thể: <span id="inter"></span></p>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>
