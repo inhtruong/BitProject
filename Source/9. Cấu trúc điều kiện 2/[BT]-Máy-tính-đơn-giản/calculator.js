@@ -8,8 +8,7 @@ function calculat(){
     if(y==undefined){
         alert("Please enter the number");
         document.getElementById('input').value = "";
-    }
-    
+    }   
 } 
 function clearnum(){
     
