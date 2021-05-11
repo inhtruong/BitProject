@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number = prompt("Nhập số lượng số nguyên tố cần tìm");
+      let count = 0;
+      let N = 2;
+      while (count <= number) {
+        let boiSo = 0;
+        let i = 2; 
+        while (i < N) {
+          if (N % i == 0) {
+            boiSo++;
+          }
+          i++;
+        }
+        if (boiSo == 0) {
+          document.write(`${N} <br>`);
+          count++;
+        }
+        N++;
+      }
+    </script>
+  </body>
+</html>

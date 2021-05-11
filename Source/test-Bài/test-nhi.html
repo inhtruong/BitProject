@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="screen">
+        <input type="text" id="input" readonly size="18">
+    </div>
+    <br>
+    <p>
+        <button style="color: blue;" value="1" onclick="view('1')">1</button> &emsp;
+        <button style="color: blue;" value="2" onclick="view('2')">2</button> &emsp;
+        <button style="color: blue;" value="3" onclick="view('3')">3</button>&emsp;
+        <button style="color: blue; " value="+" onclick="view('+')">+</button><br> <br>
+        <button style="color: blue;" value="4" onclick="view('4')">4</button>&emsp;&nbsp;
+        <button style="color: blue;" value="5" onclick="view('5')">5</button>&emsp;&nbsp;
+        <button style="color: blue;" value="6" onclick="view('6')">6</button>&emsp;
+        <button style="color: blue;" value="-" onclick="view('-')">-</button><br><br>
+        <button style="color: blue;" value="7" onclick="view('7')">7</button>&emsp;&nbsp;
+        <button style="color: blue;" value="8" onclick="view('8')">8</button>&emsp;&nbsp;
+        <button style="color: blue;" value="9" onclick="view('9')">9</button>&emsp;
+        <button style="color: blue;" value="*" onclick="view('x')">x</button><br><br>
+        <button style="color: blue;" value="C" onclick="clearnum()">C</button>&emsp;
+        <button style="color: blue;" value="0" onclick="view('0')">0</button>&emsp;
+        <button style="color: blue;" value="=" onclick="calculat()">=</button>&emsp;&nbsp;
+        <button style="color: blue;" value="/" onclick="view('/')">/</button>&emsp;&nbsp;
+    </p>
+    <script>
+        function view(button) {
+            document.getElementById('input').value += button;
+        }
+        function calculat() {
+            let x = document.getElementById('input').value;
+            let y = eval(x);
+            document.getElementById('input').value = y;
+            if (y == undefined) {
+                alert("Please enter the number");
+                document.getElementById('input').value = "";
+            }
+
+        }
+        function clearnum() {
+
+            document.getElementById('input').value = "";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Kiểm tra số hoàn hảo</h2>
+      <p>Nhập số n</p>
+      <input type="text" id="count" placeholder="Nhập số n" size="15" />
+      <input type="button" id="submit" value="Kiểm tra" />
+      <p>Kết quả: <span id="result"></span></p>
+    </div>
+    <script>
+      let submit = document.getElementById("submit");
+      submit.addEventListener("click", submitFunc);
+      function submitFunc() {
+        let sum = 0;
+        let ketqua = "";
+        let n = parseInt(document.getElementById("count").value);
+        for (let i = 1; i < n / 2; i++) {
+          if (n % i == 0) {
+            sum += i;
+          }
+        }
+        sum == n
+          ? (ketqua = n + " là số hoàn hảo")
+          : (ketqua = n + " không phải là số hoàn hảo");
+
+        document.getElementById("result").innerText = ketqua;
+      }
+    </script>
+  </body>
+</html>

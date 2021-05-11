@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST A NUMBER'S DAY OF THE MONTH</title>
+</head>
+<body>
+        <input id="month" type="text" placeholder="nhập tháng">
+        <input type="button" onclick="cal()" value="Tính số ngày"/> <br><br>
+        <p><span id="print"></span></p>
+</body>
+
+<script>
+    let month=document.getElementById('month').value;
+    let result=document.getElementById('print');
+    function cal() {
+         month=document.getElementById('month').value;
+         result=document.getElementById('print');
+        switch (month) {
+            case "1": result.innerHTML="Tháng 1 có 31 ngày";
+            break;
+            case "2": result.innerHTML="Tháng 2 có 28 hoặc 29 ngày";
+            break;
+            case "3": result.innerHTML="Tháng 3 có 31 ngày";
+            break;
+            case "4": result.innerHTML="Tháng 4 có 30 ngày";
+            break;
+            case "5": result.innerHTML="Tháng 5 có 31 ngày";
+            break;
+            case "6": result.innerHTML="Tháng 6 có 30 ngày";
+            break;
+            case "7": result.innerHTML="Tháng 7 có 31 ngày";
+            break;
+            case "8": result.innerHTML="Tháng 8 có 31 ngày";
+            break;
+            case "9": result.innerHTML="Tháng 9 có 30 ngày";
+            break;
+            case "10": result.innerHTML="Tháng 10 có 31 ngày";
+            break;
+            case "11": result.innerHTML="Tháng 11 có 30 ngày";
+            break;
+            case "12": result.innerHTML="Tháng 12 có 31 ngày";
+            break;
+            default: alert('try again');
+        }
+        
+    }
+</script>
+</html>
