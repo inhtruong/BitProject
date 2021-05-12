@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let minutes = +prompt("Enter the number of minutes to call ");
+        let permanent = 25000;
+        let postage;
+        if (minutes < 50) {
+            postage = minutes * 600;
+        } else if (minutes < 200) {
+            postage = (minutes - 50)*400 + 50*600;
+        } else {
+            postage = (minutes - 200)*200 + 50*600 + 150*400; 
+        }
+        let money = postage + permanent;
+    </script>    
+</body>
+</html>

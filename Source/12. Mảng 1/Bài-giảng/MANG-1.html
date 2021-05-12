@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let arr = [];
+      //   let size = 5;
+      //   let value;
+      //   for (let i = 0; i < size; i++) {
+      //     do {
+      //       value = Number(prompt("Nhập một số nguyên"));
+      //     } while (isNaN(value) || Number.isInteger(value));
+      //     arr[i] = value;
+      //   }
+
+      //   while (value !== 0) {
+      //     do {
+      //       value = Number(prompt("Nhập một số nguyên"));
+      //     } while (isNaN(value) || Number.isInteger(value));
+      //     arr[i] = value;
+      //     i++;
+      //   }
+
+      let arr = [];
+      let i = 0;
+      let length = 20;
+      let max = 90,
+        min = 10;
+      let soChan = 0;
+      let soNguyenTo = 0;
+      while (i < length) {
+        arr[i] = Math.floor(Math.random() * (max - min + 1)) + min;
+        i++;
+      }
+      for (i = 0; i < length; i++) {
+        document.write(`${arr[i]}; `);
+      }
+      document.write(`<br>`);
+      for (i = 0; i < length; i++) {
+        if (arr[i] % 2 == 0) {
+          soChan++;
+        }
+      }
+      document.write(`Có ${soChan} số chẵn`);
+      document.write(`<br>`);
+      for (i = 0; i < length; i++) {
+          let check = 0;
+          for (let N = 2; N < arr[i]; N++) {
+            if (arr[i] % N == 0) {
+                check++;
+            }
+          }
+          if (check == 0) {
+              soNguyenTo++;
+          }
+      }
+      document.write(`Có ${soNguyenTo} số nguyên tố`);
+      
+
+      // Math.floor(Math.random() * (max - min + 1) + min)
+    </script>
+  </body>
+</html>

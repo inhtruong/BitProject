@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let test = parseInt(prompt("Nhập điểm bài kiểm tra"));
+        let midTermTest = parseInt(prompt("Nhập điểm bài thi giữa kì"));
+        let endOftTerm = parseInt(prompt("Nhập điểm bài thi cuối kì"));
+        let average = (test + midTermTest*2 + endOftTerm*3) / 6; 
+        let grade = null;
+
+        switch (((average <=10)? ((average >=9)? "9": (average >=8)? "8" : (average >=7)? "7" : (average>=6)? "6": (average>=0)? "5": "null") : "null")){
+            case ("0"):
+            case ("1"):
+            case ("2"):
+            case ("3"):
+                grade = ("Học sinh Yếu");
+                break;
+            case ("4"):
+            case ("5"):
+                grade = ("Học sinh Trung Bình");
+                break;
+            case ("6"):
+            case ("7"):
+                grade = ("Học sinh Khá");
+                break;
+            case ("8"):
+                grade = ("Học sinh Giỏi");
+                break;
+            case ("9"):
+            case ("10"):
+                grade = ("Học sinh Xuất Sắc");
+                break;
+            default: 
+                alert("Kiểm tra lại điểm nhập vào");
+        }
+        alert (grade);
+    </script>
+</body>
+</html>
