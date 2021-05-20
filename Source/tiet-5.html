@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <table>
-        <caption></caption>
-        <thead>
-            <tr>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Button</td>
-                <td>
-                    <input type="button" value="Đăng nhập">
-                </td>
-            </tr>
-            <tr>
-                <td>Checkbox</td>
-                <td>
-                    <input type="checkbox">
-                </td>
-            </tr>
-            <
-        </tbody>
-    </table>
-</body>
+  </head>
+  <body>
+    <script>
+    let arr = [1,2,3,0,-1];
+      let sum1 = 0;
+      let sum2 = 0;
+      let sum3 = 0;
+      for (let i in arr) {
+        if (arr[i] < 0) {
+          sum1++;
+        }
+        if (arr[i] == 0) {
+          sum2++;
+        }
+        if (arr[i] > 0) {
+          sum3++;
+        }
+      }
+      sum1 = (sum1 / arr.length).toFixed(6);
+      sum2 = (sum2 / arr.length).toFixed(6);
+      sum3 = (sum3 / arr.length).toFixed(6);
+
+      console.log(sum3);
+      console.log(sum1);
+      console.log(sum2);
+    </script>
+  </body>
 </html>

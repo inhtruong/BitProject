@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        let count = 0;
+        let min = 0;
+        let max = 100;
+        let size = 10
+        let printGreaterThan10 = [];
+        for (let i = 0; i < size; i++) {
+            let value = Math.floor(Math.random() * (max - min + 1) + min)
+            if (!isNaN(value)) {
+                arr[i] = value;
+            } 
+            if (arr[i] >= 10) {
+                printGreaterThan10.push(arr[i]);
+                count++;
+            }
+        }
+        // for (let i in arr) {
+            // if (arr[i] >= 10) {
+            //     printGreaterThan10.push(arr[i]);
+            //     count++;
+            // }
+        //}
+        console.log (arr);
+        console.log (printGreaterThan10);
+        console.log (count);
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let m = [];
+      let boi_5 = [];
+      let i, j;
+      let size = 10;
+      function hienthi(array, size, name) {
+        document.write(`<table border=1 width=100%`);
+        document.write(`<tr><th colspan=10>${name}</th>`);
+        document.write(`<th>Tong</th></tr>`);
+        for (let i = 0; i < size; i++) {
+          let sum = 0;
+          document.write(`<tr>`);
+          for (let j = 0; j < size; j++) {
+            document.write(`<td>${array[i][j]}</td>`);
+            if (Number.isInteger(array[i][j])) {
+              sum += array[i][j];
+            }
+          }
+          document.write(`<td>${sum}</td>`);
+          document.write(`</tr>`);
+        }
+        document.write(`</table>`);
+      }
+      for (i = 0; i < 10; i++) {
+        m[i] = new Array();
+        for (j = 0; j < 10; j++) {
+          m[i][j] = Math.floor(Math.random() * 51) + 10;
+        }
+      }
+      for (i = 0; i < 10; i++) {
+        boi_5[i] = new Array();
+        for (j = 0; j < 10; j++) {
+          if (m[i][j] % 5 == 0) {
+            boi_5[i][j] = m[i][j];
+          } else boi_5[i][j] = "_";
+        }
+      }
+      hienthi(m, size, "M");
+      document.write(`Boi cua 5 :`);
+      hienthi(boi_5, size, "Boi 5");
+
+      // ----------------------------------------------------------------------------
+
+      function Bai1() {
+        let size = +document.getElementById("size").value;
+        let m = [];
+        let cheo_1 = (cheo_2 = sum_chan = bien = 0);
+        getArray(m, size, size, 10, 90);
+        hienthi(m, size, size, `${size}x${size}`);
+        for (let i = 0; i < size; i++) {
+          for (let j = 0; j < size; j++) {
+            if (m[i][j] % 2 == 0) {
+              sum_chan += m[i][j];
+            }
+            if (i == j) {
+              cheo_1 += m[i][j];
+            }
+            if (i + j == size - 1) {
+              cheo_2 += m[i][j];
+            }
+            if (i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+              bien += m[i][j];
+            }
+          }
+        }
+        document.write(`<br>Tổng số chẵn : ${sum_chan}`);
+        document.write(`<br>Tổng đường chéo chính : ${cheo_1}`);
+        document.write(`<br>Tong đường chéo phụ : ${cheo_2}`);
+        document.write(`<br>Tong đường biên : ${bien} <br>`);
+        document.write("Tam giác trên : <br>");
+        tamgiac_duoi(m, size);
+        document.write("Tam giác dưới : <br>");
+        tamgiac_tren(m, size);
+      }
+
+      function hienthi(array, size1, size2, name) {
+        document.write(`<table border=1 width=100%`);
+        document.write(`<tr><th colspan=${size2}>${name}</th>`);
+        for (let i = 0; i < size1; i++) {
+          document.write(`<tr>`);
+          for (let j = 0; j < size2; j++) {
+            document.write(`<td>${array[i][j]}</td>`);
+          }
+          document.write(`</tr>`);
+        }
+        document.write(`</table><br>`);
+      }
+      function getArray(array, size1, size2, min, max) {
+        for (let i = 0; i < size1; i++) {
+          let arr = [];
+          for (let j = 0; j < size2; j++) {
+            arr[j] = Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+          array[i] = arr;
+        }
+      }
+    </script>
+  </body>
+</html>

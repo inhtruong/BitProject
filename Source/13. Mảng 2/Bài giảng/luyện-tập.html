@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [];
+        const min = 0;
+        const max = 100;
+        const length = 20;
+        
+        
+        for (let i = 0; i < length; i++) {
+            arr[i] = Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        document.write (`Series: `);
+        for (let i = 0; i < length; i++) { 
+            document.write (`${arr[i]}; `);
+
+        }
+
+        let sum = 0;
+        for (let i = 0; i < length; i++) {   
+            sum += arr[i]; 
+        }
+        document.write (`<br>`);
+        document.write (`1. Total value of array: `);
+        document.write (`${sum}`);
+
+        // let x = 56;
+        // for (let i = 0; i < length; i++) { 
+        //     (x == arr[i]) ? position = (i) : position = ("Không có trong mảng");
+        // }     
+        // document.write (`<br>`);
+        // document.write (`2. Test value x: `);
+        // document.write (`${position}`);
+
+        // Bài 5
+        // let v = 101;
+        // for (let i = length; i > 0; i--) { 
+        //     arr[i] = arr[i-1];
+        // }
+        // arr[0] = v;
+
+        // Bài 6
+        // let position = 3;
+        // for (let i = position; i < length - 1; i++){
+        //     arr[i] = arr[i+1];
+        // }
+        // arr.length += 1;
+
+        // bài 2
+        let newArr = [];
+        for (let i = 0; i < length; i++) {
+            newArr[i] = arr[i] * 2;
+        }
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>1. Bảng số ngẫu nhiên của mảng 2 chiều</p>
+    <div class="table"></div>
+    <p>2. Bảng bội số của 5</p>
+    <div class="table"></div>
+    <p>3. Tổng giá trị của bảng, đường chéo chính và đường chéo phụ</p>
+    <script>
+      let arr = [];
+      let boi5 = [];
+      const min = 10;
+      const max = 60;
+      let length = 10;
+      let tab, tab2;
+
+      // ---------- Tạo bảng ------------------
+
+      tab = "<table border = 1>";
+      tab += "<tr><th colspan = 10>Bảng</th>";
+      tab += "<th>Tổng</th></tr>";
+      for (let i = 0; i < length; i++) {
+        arr[i] = [];
+        let sum = 0;
+        tab += "<tr>";
+        for (let j = 0; j < length; j++) {
+          arr[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+          sum += arr[i][j];
+          tab += `<td width = 100> ${arr[i][j]} </td>`;
+        }
+        tab += `<td width = 100> ${sum} </td>`;
+        tab += "</tr>";
+        j = 0;
+      }
+      tab += "</table>";
+      document.getElementsByClassName("table")[0].innerHTML = tab;
+
+      // ---------- Tạo bảng bội số của 5 ------------------
+
+      tab2 = "<table border = 1>";
+      tab2 += "<tr><th colspan = 10>Bội số</th>";
+
+      for (let i = 0; i < length; i++) {
+        boi5[i] = [];
+        tab2 += "<tr>";
+        for (let j = 0; j < length; j++) {
+          if (arr[i][j] % 5 == 0) {
+            boi5[i][j] = arr[i][j];
+          } else {
+            boi5[i][j] = "_";
+          }
+          tab2 += `<td width = 100> ${boi5[i][j]} </td>`;
+        }
+        tab2 += "</tr>";
+        j = 0;
+      }
+      tab2 += "</table>";
+      document.getElementsByClassName("table")[1].innerHTML = tab2;
+
+      // --------------- Tính tổng đường chéo chính và đường chéo phụ -----------------------
+
+      let mainDiagonal = 0;
+      let auxiliaryDiagonal = 0;
+      let sumAll = 0;
+      for (let i = 0; i < length; i++) {
+        for (let j = 0; j < length; j++) {
+          sumAll += arr[i][j];
+          if (i == j) {
+            mainDiagonal += arr[i][j];
+          }
+          if (i + j == (length - 1)) {
+            auxiliaryDiagonal += arr[i][j];
+          }
+        }
+      }
+      document.write(`Tổng: ${sumAll} <br>`);
+      document.write(`Tổng đường chéo chính: ${mainDiagonal} <br>`);
+      document.write(`Tổng đường chéo phụ: ${auxiliaryDiagonal}`);
+      // ---------- Tạo mảng 2 chiều --------------
+
+      //   for (let i = 0; i < length; i++) {
+      //     arr[i] = [];
+      //   }
+      //   for (let i = 0; i < length; i++) {
+      //     for (let j = 0; j < length; j++) {
+      //       arr[i][j] = Math.floor(Math.random() * (max - min + 1) + min);
+      //     }
+      //   }
+      //   for (let i = 0; i < length; i++) {
+      //     for (let j = 0; j < length; j++) {
+      //       document.write(`${arr[i][j]} |`);
+      //     }
+      //     document.write(`<br>`);
+      //   }
+    </script>
+  </body>
+</html>

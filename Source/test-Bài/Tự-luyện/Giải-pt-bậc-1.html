@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Giai Phuong Trinh Bac 1</h1>
+    <button onclick="Nhapa()">Nhap gia tri cua a</button>
+    <button onclick="Nhapb()">Nhap gia tri cua b</button>
+    <button onclick="result()">Ket qua</button>
+    <button onclick="reset()">Reset</button>
+    <div id="print"></div>
+    <script>
+      let aValue, bValue;
+      let ket_qua;
+      function Nhapa() {
+        aValue = parseInt(prompt("Nhập a:"));
+        
+        if (isNaN(aValue)) {
+            alert ("Nhập vào một số.");
+        }
+      }
+
+      function Nhapb() {
+        bValue = parseInt(prompt("Nhập b:"));
+        
+        if (isNaN(bValue)) {
+            alert ("Nhập vào một số.");
+        }
+      }
+
+      function result() {
+        if (aValue == 0) {
+          if (bValue == 0) {
+            ket_qua = "Phương trình vô số nghiệm!";
+          } else {
+            ket_qua = "Phương trình vô nghiệm!";
+          }
+        } else {
+          ket_qua = `Phương trình có một nghiệm duy nhất là: ${
+            - bValue / aValue 
+          }`;
+        }
+        
+        document.getElementById("print").innerHTML = ket_qua;
+      }
+
+      function reset() {
+          location.reload();
+      }
+
+      
+    </script>
+  </body>
+</html>
