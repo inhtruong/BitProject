@@ -1,0 +1,18 @@
+label{
+    padding: 70px;
+}
+.container{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: tomato;
+    width: 420px;
+    margin: 30px auto;
+    color: white;
+}
+input{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+h3{
+    margin-left: 550px;
+}
