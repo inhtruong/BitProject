@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+        <h3>Check string 1 and string 2</h3>
+        </div>
+        <div class="show">
+            <input type="text" id="str1"><br>
+            <input type="text" id="str2">
+        </div>
+        <div >
+            <input type="button" value="Check" onclick="check()">
+        </div>
+        <p id="result"></p>
+    </div>
+    <script>
+        
+        function check(){
+            let str1 = document.getElementById('str1').value;
+            let str2 = document.getElementById('str2').value;
+            let check = false;
+            let testString;
+            if(str1 === str2){
+                check =true;
+            }
+            if(check){
+                testString = `"${str1}" is match "${str2}"`;
+            }else {
+                testString = `"${str1}" isn't  match "${str2}"`;
+            }
+            document.getElementById('result').innerHTML = testString;
+        }
+    </script>
+</body>
+</html>

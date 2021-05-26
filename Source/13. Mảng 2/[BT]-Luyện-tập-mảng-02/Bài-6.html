@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+        <h3>Change "-" to "_"</h3>
+        </div>
+        <div class="show">
+            <input type="text" id="array"><br>
+            <input type="text" id="changearray" readonly>
+        </div>
+        <div >
+            <input type="button" value="Change Value" onclick="changeValue()">
+        </div>
+        <script>
+            function changeValue(str){
+                let arr = [];
+                str = document.getElementById('array').value;
+                for(let i =0;i<str.length;i++){
+                    arr[i] = str[i];
+                }
+                for(let i= 0;i<str.length;i++){
+                    if(arr[i]=="-"){
+                        arr[i]="_";
+                    }
+                }
+                document.getElementById('changearray').value = arr.join("");
+            }
+        </script>
+</body>
+</html>

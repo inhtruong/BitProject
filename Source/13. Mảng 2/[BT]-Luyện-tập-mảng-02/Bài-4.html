@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str =
+        " Dolorum suscipit sint ut ex voluptatem pariatur Elit consequat Eos est irure repellendus ";
+      let count = 0;
+      let i = 0;
+
+      for (i; i < str.length; i++) {
+        if (str[i] != " " && str[i + 1] == " ") {
+          count++;
+        }
+      }
+      if (str[str.length] != " " && str[str.length - 1] != " ") {
+        count++;
+      }
+
+      console.log(count);
+    </script>
+  </body>
+</html>
