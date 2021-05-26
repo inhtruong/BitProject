@@ -19,14 +19,12 @@
         } while (!isNaN(value) && arr.indexOf(value) != -1);
         arr[i] = value;
         }
-        // for (let i in arr) {
-        //     let temp = arr[i];
-        //     arr[i] = arr[arr.length - 1];
-        //     arr[arr.length - 1] = temp;
-        // }
-        let kq = arr.reverse();
+        for (let i in arr) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - 1];
+            arr[arr.length - 1] = temp;
+        }
         console.log (arr);
-        console.log (kq);
 
     </script>
 </body>
