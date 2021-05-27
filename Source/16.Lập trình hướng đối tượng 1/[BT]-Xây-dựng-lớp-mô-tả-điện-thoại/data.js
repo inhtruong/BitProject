@@ -1,0 +1,102 @@
+function Mobile() {
+    this.name = "";
+    this.battery = 100;
+    this.status = true;
+    this.message = '';
+    this.inboxMes = [];
+    this.outboxMes = [];
+    this.drafMes = '';
+    this.recMes = '';
+    let i = j = 0;
+
+    this.getbattery = function () {
+        document.write(this.battery + "<br>");
+    };
+    this.decreaseBatt = function () {
+        if (this.battery > 0)
+            this.battery--;
+    };
+    this.charge = function () {
+        if (this.battery < 90)
+            this.battery += 10
+    };
+    this.turnOn = function () {
+        this.status = true;
+        this.decreaseBatt();
+    };
+    this.turnOff = function () {
+        this.status = false;
+    };
+    this.checkOnOff = function () {
+        if (this.status)
+            document.write(" Phone is On" + "<br>");
+        else
+            document.write(" Phone is Off" + "<br>");
+        this.decreaseBatt();
+    };
+    this.getMess = function () {
+        if (this.status) {
+            return this.message;
+            this.decreaseBatt();
+        }
+    };
+    this.setMess = function (message) {
+        if (this.status) {
+            this.message += message;
+            this.decreaseBatt();
+        }
+    };
+
+    this.writeMes = function (mess) {
+        if (this.status) {
+            this.message = mess;
+            this.decreaseBatt();
+        }
+    };
+    this.sentMessages = function (name) {
+        if (this.status) {
+            name.receiveMess(this.message);
+            this.outboxMes[j] = this.message;
+            j++;
+            this.decreaseBatt();
+        }
+    };
+    this.receiveMess = function (mes) {
+        if (this.status) {
+            this.recMes = mes;
+            this.inboxMes[i] = this.recMes;
+            i++;
+            this.decreaseBatt();
+        }
+    };
+    this.inboxMess = function () {
+        if (this.status) {
+            return this.inboxMes;
+            this.decreaseBatt();
+        }
+    };
+    this.outboxMess = function () {
+        if (this.status) {
+            return this.outboxMes;
+            this.decreaseBatt();
+        }
+    }
+}
+let nokia = new Mobile();
+nokia.checkOnOff();
+let iphone = new Mobile();
+iphone.checkOnOff();
+nokia.writeMes("Hello Iphone");
+nokia.sentMessages(iphone);
+nokia.writeMes("How are you");
+nokia.sentMessages(iphone);
+iphone.writeMes("Hi Nokia");
+iphone.sentMessages(nokia);
+iphone.writeMes("I am fine");
+iphone.sentMessages(nokia);
+document.write("Nokia write mess: " + iphone.inboxMess() + "<br>");
+document.write("Nokia sent mess: " + nokia.outboxMess() + "<br>");
+document.write("Iphone inbox mess: " + iphone.inboxMess() + "<br>");
+document.write("Iphone outbox mess: " + iphone.outboxMess() + "<br>");
+nokia.getbattery;
+iphone.getbattery;
