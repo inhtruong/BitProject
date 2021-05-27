@@ -1,67 +1,61 @@
 class Apple {
-    
-    setWeight(weight) {
-        this.weight = weight;
-    }
-    getWeight() {
-        return this.weight;
-    }
-    decreaseApple() {
-        if (this.weight > 0) {
-            this.weight--;
-        }
-    }
-    isEmpty() {
-        if (this.weight > 0) {
-            return true;
-        } else false;
-    }
+  setWeight(weight) {
+    this.weight = weight;
+  }
+  getWeight() {
+    return this.weight;
+  }
+  decreaseApple() {
+    this.weight--;
+  }
+  isEmpty() {
+    if (this.weight > 0) {
+      return true;
+    } else false;
+  }
 }
 
 class Human {
-    
-    Human(name, gender, weight) {
-        this.name = name;
-        this.gender = gender;
-        this.weight = weight
-    }
-    
-    isMale() {
-        return this.gender;
-    }
+  Human(name, gender, weight) {
+    this.name = name;
+    this.gender = gender;
+    this.weight = weight;
+  }
 
-    setGender(gender) {
-        this.gender = gender;
-    }
+  isMale() {
+    return this.gender;
+  }
 
-    checkApple(Apple) {
-        return Apple.isEmpty();
-    }
-    
-    eat(Apple) {
-        this.Apple = Apple.decreaseApple();
-        this.weight++;
-    }
-    
-    say(speak) {
-        console.log ("Hello World!!");
-    }
+  setGender(gender) {
+    this.gender = gender;
+  }
 
-    setName(name) {
-        this.name = name;
-    }
+  checkApple(Apple) {
+    return Apple.isEmpty();
+  }
 
-    getName() {
-        return this.name;
-    }
+  eat(Apple) {
+    this.Apple = Apple.decreaseApple();
+    this.weight++;
+  }
 
-    setWeight(weight) {
-        this.weight = weight;
-    }
+  say(speak) {
+    console.log("Hello World!!");
+  }
 
-    getWeight() {
-        return this.Weight; 
-    }
-    
-    
+  setName(name) {
+    this.name = name;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  setWeight(weight) {
+    this.weight = weight;
+  }
+
+  getWeight() {
+    return this.Weight;
+  }
 }

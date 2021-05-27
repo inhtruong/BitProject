@@ -5,7 +5,6 @@ class Battery {
     };
     getEnergy() {
         this.energy--;
-
         return this.energy;
     };
     decreaseEnergy() {
